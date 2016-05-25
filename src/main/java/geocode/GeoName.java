@@ -40,6 +40,7 @@ import java.util.Comparator;
 
 public class GeoName extends KDNodeComparator<GeoName> {
     public String name;
+    public String stateShort;
     public boolean majorPlace; // Major or minor place
     public double latitude;
     public double longitude;
@@ -49,6 +50,7 @@ public class GeoName extends KDNodeComparator<GeoName> {
     GeoName(String data) {
         String[] names = data.split("\t");
         name = names[1];
+        stateShort = names[10];
         majorPlace = names[6].equals("P");
         latitude = Double.parseDouble(names[4]);
         longitude = Double.parseDouble(names[5]);
