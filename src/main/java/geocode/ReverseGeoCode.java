@@ -47,15 +47,6 @@ public class ReverseGeoCode {
 
 	Map<String, String>	stateMap	= null;
 
-	public static void main(String[] args) throws FileNotFoundException, IOException {
-		ReverseGeoCode coder = new ReverseGeoCode(new FileInputStream("/Users/dloetscher/cities1000.txt"), true);
-
-		GeoName name = coder.nearestPlace(39.5, -98.3);
-
-		System.out.println(name);
-
-	}
-
 	// Get placenames from http://download.geonames.org/export/dump/
 	/**
 	 * Parse the zipped geonames file.
